@@ -8,13 +8,13 @@ int FindNoOfPossibilitesToReachStairs(int n)
         return n;
     }
     int currentStep = 0;
-    int firstBackStep = 2;
-    int secondBackStep  =1;
-    for(int i=3;i<n+1;i++)
-    {
-        currentStep = secondBackStep+firstBackStep;
-        secondBackStep = firstBackStep;
-        firstBackStep = currentStep;
+    int firstBackStep = 1;
+    int secondBackStep  = 2;
+    for(int i=3;i<=n;i++)
+    {   
+        currentStep = firstBackStep+secondBackStep;
+        firstBackStep = secondBackStep;
+        secondBackStep = currentStep;
     }
     return currentStep;
 }
