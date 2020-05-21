@@ -5,5 +5,5 @@ def findMaxRob(inpList):
         a,b = b,(max(b,a+val))
     return b
 
-inpList =[2,7,9,3,1]
+inpList =[3,5,-7,8,10]
 print(findMaxRob(inpList))
